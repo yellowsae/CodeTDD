@@ -5,4 +5,4 @@ module.exports = {
   rules: {
     // Your custom rules
   },
-}
+};
