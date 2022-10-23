@@ -1,0 +1,27 @@
+// settings.json
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "json",
+    "json5",
+    "jsonc",
+    "yaml"
+  ],
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "json",
+    "json5",
+    "jsonc",
+    "yaml"
+  ]
+}
