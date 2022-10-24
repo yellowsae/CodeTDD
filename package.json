@@ -2,9 +2,11 @@
   "name": "CodeTDD",
   "version": "1.0.0",
   "description": "",
-  "keywords": [],
+  "keywords": [
+    "TDD"
+  ],
   "license": "ISC",
-  "author": "",
+  "author": "yellowsea",
   "main": "index.js",
   "scripts": {
     "test": "vitest",
