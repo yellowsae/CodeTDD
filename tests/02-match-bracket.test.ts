@@ -4,6 +4,10 @@ import { matchBracket } from '../src/02-match-bracket';
 describe('匹配括号', () => {
   test('正常匹配', () => {
     expect(matchBracket('()')).toBe(true);
+    /**
+     * 在测试用例中： 断言, 当判断为对象 & 数组时，会使用 deepEqual 比较
+     *  - 当 判断数据为  布尔值 &  数字时  会使用  toBe 比较
+     */
   });
 
   test('空字符串', () => {
