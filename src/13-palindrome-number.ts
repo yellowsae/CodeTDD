@@ -93,3 +93,10 @@ export function findPalindromeNumber3(max: number): number[] {
   }
   return res;
 }
+/**
+// 性能测试：
+ * 100 * 10000 次
+ * findPalindromeNumber3  42ms 
+ * findPalindromeNumber2  53ms
+ * findPalindromeNumber   408ms
+ */
