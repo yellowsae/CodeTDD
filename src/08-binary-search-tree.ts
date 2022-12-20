@@ -46,7 +46,6 @@ const tree: ITreeNode = {
  */
 export function preOrderTraverse(tree: ITreeNode | null) {
   if (tree === null) return;
-  console.log(tree.value);
   preOrderTraverse(tree.left);
   preOrderTraverse(tree.right);
 }
@@ -71,7 +70,6 @@ export function postOrderTraverse(tree: ITreeNode | null) {
   if (tree === null) return;
   postOrderTraverse(tree.left);
   postOrderTraverse(tree.right);
-  console.log(tree.value);
 }
 
 /**
