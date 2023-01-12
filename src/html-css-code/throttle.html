@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <p> throttle </p>
+  <div id="div1" draggable="true" style="width: 100px; height: 200px; background-color: #ccc;"> 可拖拽 </div>
+
+  <script>
+    function throttle(fn, delay = 200) {
+      let timer = 0;
+
+      return function () {
+        if (timer) return; // 当多次执行函数， timer 不为 0 时，直接返回
+        timer = setTimeout(() => {
+          // eslint-disable-next-line unicorn/prefer-reflect-apply
+          fn.apply(this, arguments);
+          timer = 0;
+        }, delay);
+      };
+    }
+
+    const div1 = document.querySelector('#div1');
+    // div1.addEventListener('drag', event => {
+    //   console.log('鼠标的位置', event.clientX, event.clientY);
+    // });
+
+    div1.addEventListener(
+      'drag',
+      throttle(event => {
+        console.log('鼠标的位置', event.clientX, event.clientY);
+      }, 200)
+    );
+  </script>
+</body>
+
+</html>
